@@ -7,7 +7,7 @@ class Feedback extends React.Component {
 <section className={css.feedback}>
         {<h2 className={css.title}>Please leave feedback</h2>}
             <div className={css.btnBlock}>
-                    <button className={css.btn} type='button'>Good</button>
+                    <button onClick={()=> (console.log("rklvlksdfl;a")) } className={css.btn} type='button'>Good</button>
                     <button className={css.btn} type='button'>Neutral</button>
                     <button className={css.btn} type='button'>Bad</button>
             </div>
