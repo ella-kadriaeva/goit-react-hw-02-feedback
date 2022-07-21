@@ -2,15 +2,31 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import css from './Feedback.module.css';
 class Feedback extends React.Component {
+state = {
+    good: 0,
+    neutral: 0,
+    bad: 0,
+}    
     handleGoodFeedback = event => {
-
-        const { target } = event;
+        this.setState((prevState) => {
+            return {
+                good: prevState.good + 1,
+            }
+        })
     }
     handleNeutralFeedback = event => {
-const { target } = event;
+        this.setState((prevState) => {
+            return {
+                neutral: prevState.neutral + 1,
+            }
+        })
     }
-    handleBadFeedback = event => {
-const { target } = event;
+        handleBadFeedback = event => {
+        this.setState((prevState) => {
+            return {
+                bad: prevState.bad + 1,
+            }
+        })
     }
 
     render() {
@@ -25,9 +41,9 @@ const { target } = event;
             
         {<h2 className={css.title}>Statistics</h2>}
             <ul className={css.statisticsBlock}>
-                    <li className={css.item} >Good:</li>
-                    <li className={css.item} >Neutral:</li>
-                    <li className={css.item} >Bad:</li>
+                    <li className={css.item} >Good: {this.state.good}</li>
+                    <li className={css.item} >Neutral: {this.state.neutral}</li>
+                    <li className={css.item} >Bad: {this.state.bad}</li>
             </ul>
 </section>
     )  
