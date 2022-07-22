@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/ella-kadriaeva/goit-react-hw-02-feedback.git/static/css/main.152e98d7.css",
-    "main.js": "/ella-kadriaeva/goit-react-hw-02-feedback.git/static/js/main.23cbf63b.js",
+    "main.css": "/ella-kadriaeva/goit-react-hw-02-feedback.git/static/css/main.62896463.css",
+    "main.js": "/ella-kadriaeva/goit-react-hw-02-feedback.git/static/js/main.dc7656c4.js",
     "index.html": "/ella-kadriaeva/goit-react-hw-02-feedback.git/index.html",
-    "main.152e98d7.css.map": "/ella-kadriaeva/goit-react-hw-02-feedback.git/static/css/main.152e98d7.css.map",
-    "main.23cbf63b.js.map": "/ella-kadriaeva/goit-react-hw-02-feedback.git/static/js/main.23cbf63b.js.map"
+    "main.62896463.css.map": "/ella-kadriaeva/goit-react-hw-02-feedback.git/static/css/main.62896463.css.map",
+    "main.dc7656c4.js.map": "/ella-kadriaeva/goit-react-hw-02-feedback.git/static/js/main.dc7656c4.js.map"
   },
   "entrypoints": [
-    "static/css/main.152e98d7.css",
-    "static/js/main.23cbf63b.js"
+    "static/css/main.62896463.css",
+    "static/js/main.dc7656c4.js"
   ]
 }
