@@ -1,5 +1,5 @@
 import React from 'react';
-
+import PropTypes from 'prop-types';
 import css from './Feedback.module.css';
 
 export default function FeedbackOptions({
@@ -21,3 +21,8 @@ export default function FeedbackOptions({
     </div>
   );
 }
+FeedbackOptions.propTypes = {
+  goodFeedback: PropTypes.number.isRequired,
+  neutralFeedback: PropTypes.number.isRequired,
+  badFeedback: PropTypes.number.isRequired,
+};

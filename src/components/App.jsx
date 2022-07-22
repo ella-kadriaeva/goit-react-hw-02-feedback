@@ -31,19 +31,22 @@ class App extends Component {
       };
     });
   };
-  //   countTotalFeedback = () => {
-  //     this.total = prevState.good + prevState.bad + prevState.neutral;
-  //   };
+  countTotalFeedback = () => {
+    const { good, neutral, bad } = this.state;
+    const total = good + neutral + bad;
+    return total;
+  };
 
-  //   countPositiveFeedbackPercentage = () => {
-  //     this.setState(prevState => {
-  //       return {
-  //         positive: (prevState.good * 100) / total,
-  //       };
-  //     });
-  //   };
+  countPositiveFeedbackPercentage = () => {
+    const { good, neutral, bad } = this.state;
+    const positiv = (good * 100) / (good + neutral + bad);
+    return Math.round(positiv);
+  };
 
   render() {
+    const { good, neutral, bad } = this.state;
+    const total = this.countTotalFeedback();
+    const positive = this.countPositiveFeedbackPercentage();
     return (
       //   <div
       //     style={{
@@ -65,10 +68,11 @@ class App extends Component {
         </Section>
         <Section title="Statistics">
           <Statistics
-            onGood={this.state.good}
-            onBad={this.state.bad}
-            onNeutral={this.state.neutral}
-            // total={this.countTotalFeedback}
+            onGood={good}
+            onBad={bad}
+            onNeutral={neutral}
+            total={total}
+            positiv={positive}
           />
         </Section>
       </div>
