@@ -1,7 +1,13 @@
-// import PropTypes from 'prop-types';
+
 import React from 'react';
-import css from './Feedback.module.css';
-class Feedback extends React.Component {
+import Statistics from 'components/Statistics/Statistics';
+
+import css from './FeedbackOptions.module.css';
+class FeedbackOptions extends React.Component {
+    // static defaultProps = {
+    // initialValue: 0,
+    // }
+
 state = {
     good: 0,
     neutral: 0,
@@ -28,7 +34,12 @@ state = {
             }
         })
     }
-
+    countTotalFeedback = event => {
+    
+    }
+countPositiveFeedbackPercentage = event => {
+        
+    }
     render() {
         return (
 <section className={css.feedback}>
@@ -38,16 +49,13 @@ state = {
                     <button onClick={this.handleNeutralFeedback} className={css.btn} type='button'>Neutral</button>
                     <button onClick={this.handleBadFeedback} className={css.btn} type='button'>Bad</button>
             </div>
-            
-        {<h2 className={css.title}>Statistics</h2>}
-            <ul className={css.statisticsBlock}>
-                    <li className={css.item} >Good: {this.state.good}</li>
-                    <li className={css.item} >Neutral: {this.state.neutral}</li>
-                    <li className={css.item} >Bad: {this.state.bad}</li>
-            </ul>
+            <>
+                    <Statistics />
+            </>
+
 </section>
     )  
     }
 }
 
-export default Feedback;
+export default FeedbackOptions;

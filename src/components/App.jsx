@@ -1,5 +1,5 @@
 import React from 'react';
-import Feedback from 'components/Feedback/Feedback.js';
+import FeedbackOptions from 'components/FeedbackOptions/FeedbackOptions.js';
 export const App = () => {
   return (
     <div
@@ -12,7 +12,7 @@ export const App = () => {
         color: '#010101'
       }}
     >
-      <Feedback />
+      <FeedbackOptions />
     </div>
   );
 };
