@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
+import Conainer from './Feedback/Container';
 import FeedbackOptions from './Feedback/FeedbackOptions';
-import Section from './Feedback/Section.js';
-import Statistics from './Feedback/Statistics.js';
+import Section from './Feedback/Section';
+import Statistics from './Feedback/Statistics';
+import Notification from './Feedback/Notification';
 
 class App extends Component {
   state = {
@@ -48,17 +50,7 @@ class App extends Component {
     const total = this.countTotalFeedback();
     const positive = this.countPositiveFeedbackPercentage();
     return (
-      //   <div
-      //     style={{
-      //       height: '100vh',
-      //       display: 'flex',
-      //       justifyContent: 'center',
-      //       alignItems: 'center',
-      //       fontSize: 40,
-      //       color: '#010101',
-      //     }}
-      //   >
-      <div>
+      <Conainer>
         <Section title="Please leave feedback">
           <FeedbackOptions
             goodFeedback={this.handleGoodFeedback}
@@ -67,15 +59,19 @@ class App extends Component {
           />
         </Section>
         <Section title="Statistics">
-          <Statistics
-            onGood={good}
-            onBad={bad}
-            onNeutral={neutral}
-            total={total}
-            positiv={positive}
-          />
+          {total === 0 ? (
+            <Notification message="There is no feedback"></Notification>
+          ) : (
+            <Statistics
+              onGood={good}
+              onBad={bad}
+              onNeutral={neutral}
+              total={total}
+              positiv={positive}
+            />
+          )}
         </Section>
-      </div>
+      </Conainer>
     );
   }
 }
