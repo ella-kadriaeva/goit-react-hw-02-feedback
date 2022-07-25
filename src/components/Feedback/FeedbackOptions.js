@@ -22,7 +22,7 @@ export default function FeedbackOptions({
   );
 }
 FeedbackOptions.propTypes = {
-  goodFeedback: PropTypes.number.isRequired,
-  neutralFeedback: PropTypes.number.isRequired,
-  badFeedback: PropTypes.number.isRequired,
+  goodFeedback: PropTypes.func.isRequired,
+  neutralFeedback: PropTypes.func.isRequired,
+  badFeedback: PropTypes.func.isRequired,
 };
