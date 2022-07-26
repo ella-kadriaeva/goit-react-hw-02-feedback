@@ -1,6 +1,7 @@
 import React from 'react';
-import css from './Feedback.module.css';
+import css from './Notification.module.css';
 import PropTypes from 'prop-types';
+
 export default function Notification({ message }) {
   return (
     <>
@@ -8,6 +9,7 @@ export default function Notification({ message }) {
     </>
   );
 }
+
 Notification.propTypes = {
   message: PropTypes.string.isRequired,
 };

@@ -1,6 +1,7 @@
 import React from 'react';
-import css from './Feedback.module.css';
+import css from './Statistics.module.css';
 import PropTypes from 'prop-types';
+
 export default function Statistics({
   onGood,
   onNeutral,
@@ -18,6 +19,7 @@ export default function Statistics({
     </ul>
   );
 }
+
 Statistics.propTypes = {
   onGood: PropTypes.number.isRequired,
   onNeutral: PropTypes.number.isRequired,
